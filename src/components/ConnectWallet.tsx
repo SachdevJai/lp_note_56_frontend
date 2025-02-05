@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Wallet } from "lucide-react";
 import styles from "../styles/ConnectWallet.module.css";
+import { connectPhantomWallet } from "../utils/wallet";
 
 declare global {
   interface Window {
@@ -36,24 +37,12 @@ const ConnectWallet: React.FC<ConnectWalletProps> = ({ onConnect }) => {
     setHasAttempted(true);
     setErrorMessage(null);
 
-    if (window.solana && window.solana.isPhantom) {
-      try {
-        if (window.solana.isConnected) {
-          try {
-            await window.solana.disconnect();
-          } catch (disconnectError) {}
-        }
-        const response = await window.solana.connect();
-        const publicKey = response.publicKey.toString();
-        setWalletAddress(publicKey);
-        onConnect(publicKey);
-      } catch (err) {
-        setErrorMessage("Failed to connect wallet. Please try again.");
-      }
-    } else {
-      setErrorMessage(
-        "Phantom Wallet not found! Please install it from https://phantom.com/"
-      );
+    try {
+      const { publicKey } = await connectPhantomWallet();
+      setWalletAddress(publicKey);
+      onConnect(publicKey);
+    } catch (error: any) {
+      setErrorMessage(error.message);
     }
   };
 

@@ -10,9 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@solana/web3.js": "^1.98.0",
     "lucide-react": "^0.474.0",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "solana": "^3.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
