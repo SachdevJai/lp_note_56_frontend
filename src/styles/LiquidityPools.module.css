@@ -1,0 +1,59 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px; /* Space between sections */
+    margin: 20px; /* Margin around the entire container */
+  }
+  
+  .pairSection {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between rows */
+    width: 100%; /* Ensure it takes full width */
+    margin-bottom: 20px; /* Margin below each pair section */
+  }
+  
+  .table {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between table rows */
+    width: 100%; /* Ensure it takes full width */
+  }
+  
+  .tableHeader {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; /* Ensure it takes full width */
+    margin-bottom: 10px; /* Margin below the header */
+  }
+  
+  .tableRow {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; /* Ensure it takes full width */
+    align-items: center; /* Align items vertically */
+    margin-bottom: 10px; /* Margin between each row */
+  }
+  
+  .amountInput {
+    width: 100px; /* Equal width for the input field */
+    padding: 5px;
+    margin-left: 10px; /* Space between input and other elements */
+    margin-right: 10px; /* Space on the right */
+  }
+  
+  .buyButton {
+    width: 100px; /* Equal width for the button */
+    padding: 5px;
+    margin-left: 10px; /* Space between button and other elements */
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .buyButton:hover {
+    background-color: #45a049;
+  }
+  

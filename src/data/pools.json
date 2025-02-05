@@ -1,0 +1,296 @@
+{
+  "last_updated": "2025-01-28T01:16:40.606712",
+  "pairs": [
+    {
+      "name": "SOL-USDC",
+      "pools": [
+        {
+          "address": "5BKxfWMbmYBAEWvyPZS9esPducUba9GqyMjtLCfbaqyF",
+          "symbol_x": "SOL",
+          "symbol_y": "USDC",
+          "mint_x": "So11111111111111111111111111111111111111112",
+          "mint_y": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "volume_24h": 74620083.34535871,
+          "tvl": 0
+        },
+        {
+          "address": "BGm1tav58oGcsQJehL9WXBFXF7D27vZsKefj4xJKD5Y",
+          "symbol_x": "SOL",
+          "symbol_y": "USDC",
+          "mint_x": "So11111111111111111111111111111111111111112",
+          "mint_y": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "volume_24h": 64218942.06635676,
+          "tvl": 0
+        },
+        {
+          "address": "BVRbyLjjfSBcoyiYFuxbgKYnWuiFaF9CSXEa5vdSZ9Hh",
+          "symbol_x": "SOL",
+          "symbol_y": "USDC",
+          "mint_x": "So11111111111111111111111111111111111111112",
+          "mint_y": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "volume_24h": 57545518.46209508,
+          "tvl": 0
+        },
+        {
+          "address": "5XRqv7LCoC5FhWKk5JN8n4kCrJs3e4KH1XsYzKeMd5Nt",
+          "symbol_x": "SOL",
+          "symbol_y": "USDC",
+          "mint_x": "So11111111111111111111111111111111111111112",
+          "mint_y": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "volume_24h": 24519938.887354616,
+          "tvl": 0
+        },
+        {
+          "address": "sZxb9vrxJBpFiJBogovhfkYqfapVzveLEU4TmzWv4GN",
+          "symbol_x": "SOL",
+          "symbol_y": "USDC",
+          "mint_x": "So11111111111111111111111111111111111111112",
+          "mint_y": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "volume_24h": 12609499.199015837,
+          "tvl": 0
+        },
+        {
+          "address": "HTvjzsfX3yU6BUodCjZ5vZkUrAxMDTrBs3CJaq43ashR",
+          "symbol_x": "SOL",
+          "symbol_y": "USDC",
+          "mint_x": "So11111111111111111111111111111111111111112",
+          "mint_y": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "volume_24h": 10249534.375842512,
+          "tvl": 0
+        },
+        {
+          "address": "2L47gbUzGsnJZqRzfny4b3VWvKBnMRTMeNH3uzFrj6ko",
+          "symbol_x": "SOL",
+          "symbol_y": "USDC",
+          "mint_x": "So11111111111111111111111111111111111111112",
+          "mint_y": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "volume_24h": 9995694.974278245,
+          "tvl": 0
+        },
+        {
+          "address": "FbkX1h2YTs171cEMa4GrV7XbAiQt5zSmV2CjfYWxXJDP",
+          "symbol_x": "SOL",
+          "symbol_y": "USDC",
+          "mint_x": "So11111111111111111111111111111111111111112",
+          "mint_y": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "volume_24h": 8041941.27584986,
+          "tvl": 0
+        },
+        {
+          "address": "DNkZFw1VF36K15yoDvgY2QmrDiwrLP5y1DcMEHEPPa1Q",
+          "symbol_x": "SOL",
+          "symbol_y": "USDC",
+          "mint_x": "So11111111111111111111111111111111111111112",
+          "mint_y": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "volume_24h": 7101120.68666273,
+          "tvl": 0
+        },
+        {
+          "address": "8M5rjeDQKW4w4rmWFQLTqCYVuA1rMe9Z2QQ2SZResD9M",
+          "symbol_x": "SOL",
+          "symbol_y": "USDC",
+          "mint_x": "So11111111111111111111111111111111111111112",
+          "mint_y": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "volume_24h": 6490764.835032005,
+          "tvl": 0
+        },
+        {
+          "address": "2sf5NYcY4zUPXUSmG6f66mskb24t5F8S11pC1Nz5nQT3",
+          "symbol_x": "SOL",
+          "symbol_y": "USDC",
+          "mint_x": "So11111111111111111111111111111111111111112",
+          "mint_y": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "volume_24h": 5841673.377497718,
+          "tvl": 0
+        },
+        {
+          "address": "5BoHD7DAHsGCA9D8eUkkZTgWTrnpad6G18MnTq3cUS86",
+          "symbol_x": "SOL",
+          "symbol_y": "USDC",
+          "mint_x": "So11111111111111111111111111111111111111112",
+          "mint_y": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "volume_24h": 4814217.608935407,
+          "tvl": 0
+        },
+        {
+          "address": "5rCf1DM8LjKTw4YqhnoLcngyZYeNnQqztScTogYHAS6",
+          "symbol_x": "SOL",
+          "symbol_y": "USDC",
+          "mint_x": "So11111111111111111111111111111111111111112",
+          "mint_y": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "volume_24h": 4435616.585385125,
+          "tvl": 0
+        },
+        {
+          "address": "CgqwPLSFfht89pF5RSKGUUMFj5zRxoUt4861w2SkXaqY",
+          "symbol_x": "SOL",
+          "symbol_y": "USDC",
+          "mint_x": "So11111111111111111111111111111111111111112",
+          "mint_y": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "volume_24h": 4390847.1083461745,
+          "tvl": 0
+        },
+        {
+          "address": "9Q1njS4j8svdjCnGd2xJn7RAkqrJ2vqjaPs3sXRZ6UR7",
+          "symbol_x": "SOL",
+          "symbol_y": "USDC",
+          "mint_x": "So11111111111111111111111111111111111111112",
+          "mint_y": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "volume_24h": 2625829.2448859396,
+          "tvl": 0
+        },
+        {
+          "address": "6WTbcDmtqDNwxxLe9YzHzpSSBKQ7AduZG7SmYWpRwjZZ",
+          "symbol_x": "USDC",
+          "symbol_y": "SOL",
+          "mint_x": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "mint_y": "So11111111111111111111111111111111111111112",
+          "volume_24h": 2420421.4486023197,
+          "tvl": 0
+        },
+        {
+          "address": "6YuRXMMF4W8zo216CP1A7iiE627GdDaitCRS2iXEdM2q",
+          "symbol_x": "SOL",
+          "symbol_y": "USDC",
+          "mint_x": "So11111111111111111111111111111111111111112",
+          "mint_y": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "volume_24h": 1980018.5268903251,
+          "tvl": 0
+        },
+        {
+          "address": "9oCwYQJYCWHeXnodFCxdqY1kV4uBPo5P7yWGkNJ2Wjj3",
+          "symbol_x": "SOL",
+          "symbol_y": "USDC",
+          "mint_x": "So11111111111111111111111111111111111111112",
+          "mint_y": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "volume_24h": 1880828.7090920168,
+          "tvl": 0
+        }
+      ],
+      "last_updated": "2025-01-28T01:12:39.899537"
+    },
+    {
+      "name": "Fartcoin -SOL",
+      "pools": [
+        {
+          "address": "6wJ7W3oHj7ex6MVFp2o26NSof3aey7U8Brs8E371WCXA",
+          "symbol_x": "Fartcoin ",
+          "symbol_y": "SOL",
+          "mint_x": "9BB6NFEcjBCtnNLFko2FqVQBq8HHM13kCyYcdQbgpump",
+          "mint_y": "So11111111111111111111111111111111111111112",
+          "volume_24h": 73002103.05447757,
+          "tvl": 0
+        },
+        {
+          "address": "4tzcBaHpoH1wceywe7vzcYkgBesSi2WjygQr7oHSbCBt",
+          "symbol_x": "Fartcoin ",
+          "symbol_y": "SOL",
+          "mint_x": "9BB6NFEcjBCtnNLFko2FqVQBq8HHM13kCyYcdQbgpump",
+          "mint_y": "So11111111111111111111111111111111111111112",
+          "volume_24h": 9386426.857914208,
+          "tvl": 0
+        },
+        {
+          "address": "3JKE7WTssAceWBWea4M9yWCzuby5vgzuCJdRCgCyBUXL",
+          "symbol_x": "Fartcoin ",
+          "symbol_y": "SOL",
+          "mint_x": "9BB6NFEcjBCtnNLFko2FqVQBq8HHM13kCyYcdQbgpump",
+          "mint_y": "So11111111111111111111111111111111111111112",
+          "volume_24h": 8156168.520596115,
+          "tvl": 0
+        }
+      ],
+      "last_updated": "2025-01-28T01:12:58.769132"
+    },
+    {
+      "name": "JUP-USDC",
+      "pools": [
+        {
+          "address": "Xyb1mSNAtwWWt8nDsg3XX8xuuGtyaq2LHPD2hECbvSo",
+          "symbol_x": "JUP",
+          "symbol_y": "USDC",
+          "mint_x": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+          "mint_y": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "volume_24h": 10437406.285911981,
+          "tvl": 0
+        },
+        {
+          "address": "HfgjZDmexhFVD28Vkb1NbQwWeXP3uDcVTLPjSGHmRHhL",
+          "symbol_x": "JUP",
+          "symbol_y": "USDC",
+          "mint_x": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+          "mint_y": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "volume_24h": 5304186.876384158,
+          "tvl": 0
+        },
+        {
+          "address": "3H8reV51SedmYCiKmQp68wkAixVcNem1YepByHJWQnDh",
+          "symbol_x": "JUP",
+          "symbol_y": "USDC",
+          "mint_x": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+          "mint_y": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "volume_24h": 4996948.684745936,
+          "tvl": 0
+        },
+        {
+          "address": "HyhMt7jPKJ1LLXQTm5wjf5f4kWqAeTeKQZvMq8TtZnPV",
+          "symbol_x": "JUP",
+          "symbol_y": "USDC",
+          "mint_x": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+          "mint_y": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "volume_24h": 3011684.856179647,
+          "tvl": 0
+        }
+      ],
+      "last_updated": "2025-01-28T01:13:09.283790"
+    },
+    {
+      "name": "SOL-USDT",
+      "pools": [
+        {
+          "address": "HToiT8XK8GHgAT4N3oGXadc7opdApPwsbCL9tFRYa3Rg",
+          "symbol_x": "USDT",
+          "symbol_y": "SOL",
+          "mint_x": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
+          "mint_y": "So11111111111111111111111111111111111111112",
+          "volume_24h": 7402747.779068215,
+          "tvl": 0
+        },
+        {
+          "address": "TQ2gHuyBXNpkeZLuDeHYsAzuWxhhQfYSib3sKbCTULc",
+          "symbol_x": "SOL",
+          "symbol_y": "USDT",
+          "mint_x": "So11111111111111111111111111111111111111112",
+          "mint_y": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
+          "volume_24h": 4236211.590130689,
+          "tvl": 0
+        },
+        {
+          "address": "CyrzGrL9U9x9FfqfQiTi7kWsvJ9mK97tGxtPF1AV8E8d",
+          "symbol_x": "SOL",
+          "symbol_y": "USDT",
+          "mint_x": "So11111111111111111111111111111111111111112",
+          "mint_y": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
+          "volume_24h": 1956300.0400646026,
+          "tvl": 0
+        }
+      ],
+      "last_updated": "2025-01-28T01:13:23.021383"
+    },
+    {
+      "name": "WBTC-SOL",
+      "pools": [
+        {
+          "address": "5BxVERzPHzvGrHGqiKcy5Pz5WwbRq3VZ2YMLq5dbGMoW",
+          "symbol_x": "WBTC",
+          "symbol_y": "SOL",
+          "mint_x": "3NZ9JMVBmGAqocybic2c7LQCJScmgsAZ6vQqTDzcqmJh",
+          "mint_y": "So11111111111111111111111111111111111111112",
+          "volume_24h": 7016516.062708017,
+          "tvl": 0
+        }
+      ],
+      "last_updated": "2025-01-28T01:14:05.307996"
+    }
+  ]
+}
