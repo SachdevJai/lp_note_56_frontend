@@ -40,3 +40,20 @@
 .read-the-docs {
   color: #888;
 }
+
+
+.App {
+  text-align: center;
+  padding: 2rem;
+}
+
+.balanceDisplay {
+  font-size: 1.2rem;
+  color: #0056b3;
+  background-color: #e2f0ff;
+  padding: 10px 20px;
+  margin: 20px auto;
+  max-width: 400px;
+  border-radius: 4px;
+  font-weight: bold;
+}
