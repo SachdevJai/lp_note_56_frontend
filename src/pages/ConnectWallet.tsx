@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Wallet } from "lucide-react";
-import styles from "../styles/ConnectWallet.module.css";
+// import styles from "../styles/ConnectWallet.module.css";
 import { connectPhantomWallet } from "../utils/wallet";
 
 declare global {

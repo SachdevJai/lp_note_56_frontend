@@ -53,8 +53,8 @@ function App() {
     <BrowserRouter>
       <Routes>
         {/* <Route path="/" element={<ConnectWallet onConnect={(publicKey) => console.log(publicKey)} />} /> */}
-        <Route path="/createPos" element={<CreatePos data={allPools} />} />
-        <Route path="/pos" element={<Positions positionData = {allPos} />} />
+        <Route path="/create" element={<CreatePos data={allPools} />} />
+        <Route path="/positions" element={<Positions positionData = {allPos} />} />
       </Routes>
     </BrowserRouter>
   );
