@@ -1,16 +1,23 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import axios from 'axios';
 import { useState, useEffect } from "react";
-import config from './envvarsconfig';
-
+import axios from "axios";
+import config from "./envvarsconfig";
+import { ConnectionProvider, WalletProvider } from "@solana/wallet-adapter-react";
+import { PhantomWalletAdapter } from "@solana/wallet-adapter-wallets";
+import { Connection } from "@solana/web3.js";
+import Navbar from "./components/Navbar";
 import CreatePos from "./pages/CreatePos";
 import Positions from "./pages/Positions";
+
+const wallets = [new PhantomWalletAdapter()];
 
 function App() {
   const [allPools, setAllPools] = useState([]);
   const [allPos, setAllPos] = useState({});
+  const [balance, setBalance] = useState(0);
 
+  // Fetch data from the backend
   useEffect(() => {
     const fetchPools = async () => {
       try {
@@ -26,37 +33,45 @@ function App() {
         const response = await axios.get(`${config.BACKEND_URL}/getPos`);
         setAllPos(response.data);
       } catch (error) {
-        console.error("Error fetching pools:", error);
+        console.error("Error fetching positions:", error);
       }
     };
 
-    fetchPositions();
     fetchPools();
+    fetchPositions();
   }, []);
 
-  // const [walletAddress, setWalletAddress] = useState<string | null>(null);
-  // const [walletBalance, setWalletBalance] = useState<number | null>(null);
-
-  // const handleConnect = async (publicKey: string) => {
-  //   setWalletAddress(publicKey);
-  //   try {
-  //     const balance = await getWalletBalance(publicKey);
-  //     setWalletBalance(balance);
-  //   } catch (error) {
-  //     console.error("Error fetching balance:", error);
-  //   }
-  // };
-
-
+  // Fetch wallet balance when connected
+  useEffect(() => {
+    const { publicKey, connected } = window.solana || {};
+    if (connected && publicKey) {
+      const getBalance = async () => {
+        try {
+          const connection = new Connection(config.RPC_URL, "confirmed");
+          const balance = await connection.getBalance(publicKey);
+          setBalance(balance / 1e9); // Convert lamports to SOL
+        } catch (error) {
+          console.error("Error fetching balance:", error);
+        }
+      };
+      getBalance();
+    }
+  }, [window.solana]);
 
   return (
-    <BrowserRouter>
-      <Routes>
-        {/* <Route path="/" element={<ConnectWallet onConnect={(publicKey) => console.log(publicKey)} />} /> */}
-        <Route path="/create" element={<CreatePos data={allPools} />} />
-        <Route path="/positions" element={<Positions positionData = {allPos} />} />
-      </Routes>
-    </BrowserRouter>
+    <ConnectionProvider endpoint={config.RPC_URL}>
+      <WalletProvider wallets={wallets} autoConnect>
+        <BrowserRouter>
+          <Navbar />
+          <div className="pt-[80px]">
+            <Routes>
+              <Route path="/create" element={<CreatePos data={allPools} />} />
+              <Route path="/positions" element={<Positions positionData={allPos} />} />
+            </Routes>
+          </div>
+        </BrowserRouter>
+      </WalletProvider>
+    </ConnectionProvider>
   );
 }
 
