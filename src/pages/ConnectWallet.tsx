@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Wallet } from "lucide-react";
-// import styles from "../styles/ConnectWallet.module.css";
 import { connectPhantomWallet } from "../utils/wallet";
 
 declare global {
@@ -49,36 +48,41 @@ const ConnectWallet: React.FC<ConnectWalletProps> = ({ onConnect }) => {
   return (
     <>
       {hasAttempted && errorMessage && (
-        <div className={styles.errorTop}>
-          <div className={styles.alert}>{errorMessage}</div>
+        <div className="fixed top-0 left-0 right-0 bg-red-600 text-white p-4">
+          <div className="flex justify-between items-center">
+            <p>{errorMessage}</p>
+          </div>
         </div>
       )}
-      <div className={styles.container}>
-        <div className={styles.walletCard}>
-          <div className={styles.walletHeader}>
-            <Wallet className={styles.walletIcon} />
-            <h2>Connect Your Wallet</h2>
-            <p>Connect your Phantom wallet to get started</p>
+      <div className="flex justify-center items-center min-h-screen bg-gray-900">
+        <div className="bg-zinc-800 p-6 rounded-lg shadow-lg w-full max-w-sm">
+          <div className="flex items-center mb-6">
+            <Wallet className="text-white w-6 h-6 mr-2" />
+            <h2 className="text-xl font-semibold text-white">Connect Your Wallet</h2>
           </div>
+          <p className="text-gray-300 mb-6">Connect your Phantom wallet to get started</p>
 
           {walletAddress ? (
             <div>
-              <p>Connected Wallet:</p>
-              <p className={styles.walletAddress}>{walletAddress}</p>
+              <p className="text-white">Connected Wallet:</p>
+              <p className="text-gray-300">{walletAddress}</p>
             </div>
           ) : (
             <div>
-              <button className={styles.connectButton} onClick={connectWallet}>
-                <Wallet className={styles.buttonIcon} />
+              <button
+                className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none transition-colors"
+                onClick={connectWallet}
+              >
+                <Wallet className="inline-block mr-2" />
                 Connect Phantom Wallet
               </button>
-              <p className={styles.installText}>
+              <p className="text-gray-400 mt-4 text-sm">
                 Don't have Phantom?{" "}
                 <a
                   href="https://phantom.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={styles.installLink}
+                  className="text-blue-500 hover:text-blue-400"
                 >
                   Install Wallet
                 </a>

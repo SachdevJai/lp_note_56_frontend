@@ -2,16 +2,27 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import config from "../envvarsconfig";
 
-const truncateAddress = (address) => {
+// Define the type for position data
+interface Position {
+  publicKey: string;
+  unclaimedFees: number;
+  currentLiquidity: number;
+}
+
+const truncateAddress = (address: string) => {
   if (!address) return 'Unknown';
   return `${address.slice(0, 20)}...`;
 };
 
-const Positions = ({ positionData = {} }) => {
-  const [amounts, setAmounts] = useState({});
-  const [loading, setLoading] = useState({});
+interface PositionsProps {
+  positionData: Record<string, Position>;
+}
 
-  const handleAmountChange = (poolAddress, value) => {
+const Positions: React.FC<PositionsProps> = ({ positionData = {} }) => {
+  const [amounts, setAmounts] = useState<Record<string, string>>({});
+  const [loading, setLoading] = useState<Record<string, string | null>>({});
+
+  const handleAmountChange = (poolAddress: string, value: string) => {
     if (value === '') {
       setAmounts(prev => ({ ...prev, [poolAddress]: '' }));
       return;
@@ -25,7 +36,7 @@ const Positions = ({ positionData = {} }) => {
     }
   };
 
-  const addLiquidity = async (poolAddress) => {
+  const addLiquidity = async (poolAddress: string) => {
     try {
       setLoading(prev => ({ ...prev, [poolAddress]: 'add' }));
       await axios.post(config.BACKEND_URL + "/addLiq", {
@@ -40,7 +51,7 @@ const Positions = ({ positionData = {} }) => {
     }
   };
 
-  const sellPosition = async (poolAddress) => {
+  const sellPosition = async (poolAddress: string) => {
     try {
       setLoading(prev => ({ ...prev, [poolAddress]: 'sell' }));
       await axios.post(config.BACKEND_URL + "/sell", { poolAddress });
@@ -52,7 +63,7 @@ const Positions = ({ positionData = {} }) => {
     }
   };
 
-  const claimFees = async (poolAddress) => {
+  const claimFees = async (poolAddress: string) => {
     try {
       setLoading(prev => ({ ...prev, [poolAddress]: 'claim' }));
       await axios.post(config.BACKEND_URL + "/claimFees", { poolAddress });
@@ -87,19 +98,19 @@ const Positions = ({ positionData = {} }) => {
             <div className="flex items-center justify-between gap-4">
               <div className="flex-shrink-0 w-48 group relative">
                 <p className="font-medium text-white">
-                  {truncateAddress(position?.publicKey)}
+                  {truncateAddress(position.publicKey)}
                 </p>
                 <div className="invisible group-hover:visible absolute left-0 top-full mt-1 p-2 bg-black rounded text-sm text-white z-10 whitespace-nowrap">
-                  {position?.publicKey || 'Unknown'}
+                  {position.publicKey || 'Unknown'}
                 </div>
               </div>
               
               <div className="flex items-center gap-4 text-zinc-300">
                 <span className="text-sm">
-                  Fees: {position?.unclaimedFees || 0}
+                  Fees: {position.unclaimedFees || 0}
                 </span>
                 <span className="text-sm">
-                  Liquidity: {position?.currentLiquidity || 0}
+                  Liquidity: {position.currentLiquidity || 0}
                 </span>
               </div>
 
@@ -108,30 +119,30 @@ const Positions = ({ positionData = {} }) => {
                   type="text"
                   inputMode="decimal"
                   placeholder="Amount"
-                  value={amounts[position?.publicKey] || ''}
-                  onChange={(e) => handleAmountChange(position?.publicKey, e.target.value)}
+                  value={amounts[position.publicKey] || ''}
+                  onChange={(e) => handleAmountChange(position.publicKey, e.target.value)}
                   className="w-24 h-8 px-2 bg-zinc-900 border border-zinc-700 rounded text-right text-white"
                 />
                 <button 
-                  onClick={() => addLiquidity(position?.publicKey)}
-                  disabled={loading[position?.publicKey] === 'add'}
+                  onClick={() => addLiquidity(position.publicKey)}
+                  disabled={loading[position.publicKey] === 'add'}
                   className="px-3 py-1 bg-green-600 text-white rounded hover:bg-green-700 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {loading[position?.publicKey] === 'add' ? 'Adding Liquidity...' : 'Add Liquidity'}
+                  {loading[position.publicKey] === 'add' ? 'Adding Liquidity...' : 'Add Liquidity'}
                 </button>
                 <button 
-                  onClick={() => sellPosition(position?.publicKey)}
-                  disabled={loading[position?.publicKey] === 'sell'}
+                  onClick={() => sellPosition(position.publicKey)}
+                  disabled={loading[position.publicKey] === 'sell'}
                   className="px-3 py-1 bg-red-600 text-white rounded hover:bg-red-700 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {loading[position?.publicKey] === 'sell' ? 'Removing Liquidity...' : 'Remove Liquidity'}
+                  {loading[position.publicKey] === 'sell' ? 'Removing Liquidity...' : 'Remove Liquidity'}
                 </button>
                 <button 
-                  onClick={() => claimFees(position?.publicKey)}
-                  disabled={loading[position?.publicKey] === 'claim'}
+                  onClick={() => claimFees(position.publicKey)}
+                  disabled={loading[position.publicKey] === 'claim'}
                   className="px-3 py-1 bg-blue-600 text-white rounded hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {loading[position?.publicKey] === 'claim' ? 'Claiming Fees...' : 'Claim Fees'}
+                  {loading[position.publicKey] === 'claim' ? 'Claiming Fees...' : 'Claim Fees'}
                 </button>
               </div>
             </div>
