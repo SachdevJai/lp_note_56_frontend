@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Wallet } from "lucide-react";
 import { Connection, PublicKey } from "@solana/web3.js";
