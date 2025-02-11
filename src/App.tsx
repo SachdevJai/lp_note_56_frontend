@@ -15,7 +15,7 @@ const wallets = [new PhantomWalletAdapter()];
 function App() {
   const [allPools, setAllPools] = useState([]);
   const [allPos, setAllPos] = useState({});
-  const [balance, setBalance] = useState(0);
+  const [_, setBalance] = useState(0);
 
   // Fetch data from the backend
   useEffect(() => {
