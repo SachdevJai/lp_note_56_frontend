@@ -15,7 +15,6 @@ const Navbar = () => {
   const [connected, setConnected] = useState<boolean>(false);
   const [balance, setBalance] = useState<number>(0);
 
-  // Fetch balance from Solana
   const fetchBalance = async (publicKey: string) => {
     try {
       const connection = new Connection(config.RPC_URL, "confirmed");
