@@ -3,11 +3,6 @@ import { ChevronDown, ChevronUp } from 'lucide-react';
 import axios from 'axios';
 import config from "../envvarsconfig";
 
-const truncateAddress = (address: string) => {
-  if (!address) return 'Unknown';
-  return `${address.slice(0, 20)}...`;
-};
-
 interface BinData {
   binId: number;
   price: string;
@@ -138,13 +133,6 @@ const Positions: React.FC<PositionsProps> = ({ positionData = {} }) => {
     } finally {
       setLoading(prev => ({ ...prev, [lbPosition.publicKey]: null }));
     }
-  };
-
-  const toggleExpand = (poolAddress: string) => {
-    setExpandedPositions(prev => ({
-      ...prev,
-      [poolAddress]: !prev[poolAddress]
-    }));
   };
 
   if (!positionData || Object.keys(positionData).length === 0) {
