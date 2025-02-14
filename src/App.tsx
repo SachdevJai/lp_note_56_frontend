@@ -38,6 +38,11 @@ function App() {
 
     fetchPools();
     fetchPositions();
+
+    const intervalId = setInterval(fetchPositions, 100_000); // 300,000ms = 5 minutes
+
+    return () => clearInterval(intervalId);
+  
   }, []);
 
   // Fetch wallet balance when connected
